@@ -115,5 +115,12 @@ alias vim='nvim'
 
 
 
+#alias varnishStart='sudo /usr/local/opt/varnish6/sbin/varnishd -f /usr/local/etc/varnish/default.vcl -s malloc,256m -T 127.0.0.1:2000 -a 0.0.0.0:80'
+alias varnishOpen='sudo vim /usr/local/etc/varnish/default.vcl'
+alias varnishStart='sudo /usr/local/sbin/varnishd -f /usr/local/etc/varnish/default.vcl -s malloc,256m -T 127.0.0.1:2000 -a 0.0.0.0:80'
+alias varnishStop='sudo pkill varnishd'
+alias varnishRestart='varnishStop;varnishStart;'
 
-
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
