@@ -37,8 +37,9 @@ set nowrap
 
 "color scheme
 set t_Co=256
-let ayucolor="mirage" " for mirage version of theme
-colorscheme ayu
+set background=dark        " for the light version
+let g:one_allow_italics = 1 " I love italic for comments
+colorscheme one
 
 " Highlight current line
 set cursorline
@@ -93,8 +94,12 @@ set formatprg=par
 
 if has('persistent_undo')
   set undofile
-  set undodir=~/.trippcconfig/vim/undo
 endif
+
+" Centralize backups, swapfiles and undo history
+set backupdir=~/.trippcconfig/vim/backups
+set directory=~/.trippcconfig/vim/swaps
+set undodir=~/.trippcconfig/vim/undo
 
 "$$$$$$$$$$$$$$$$$$$$ shortcuts $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
 
